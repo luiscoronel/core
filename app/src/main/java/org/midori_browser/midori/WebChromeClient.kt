@@ -1,8 +1,6 @@
 package org.midori_browser.midori
 
-import android.os.Message
 import android.support.v7.widget.Toolbar
-import android.webkit.GeolocationPermissions
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import kotlinx.android.synthetic.main.activity_browser.*
@@ -13,7 +11,7 @@ class WebChromeClient constructor(val activity: BrowserActivity) : WebChromeClie
     }
 
     override fun onReceivedTitle(view: WebView?, title: String?) {
-        val toolbar = activity.findViewById<Toolbar>(R.id.toolbar)
-        toolbar.title = title
+        val toolbar:Toolbar? = activity.findViewById(R.id.toolbarTwo)
+        toolbar?.title = title
     }
 }

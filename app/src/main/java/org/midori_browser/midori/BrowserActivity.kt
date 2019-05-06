@@ -149,6 +149,13 @@ class BrowserActivity : AppCompatActivity() {
             webView.reload()
             true
         }
+        R.id.actionTabs -> {
+
+            val intent = Intent(this, ActivityTabs::class.java)
+            startActivity(intent)
+
+            true
+        }
         else -> {
             super.onOptionsItemSelected(item)
         }
